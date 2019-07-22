@@ -1,7 +1,6 @@
 {
   "name": "taskpie",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -25,5 +24,9 @@
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "description": "Um simples gerenciador de tarefas",
+  "repository": "https://github.com/gabrodbr/taskpie.git",
+  "author": "Gabriel Rodrigues <jipacoding@gmail.com>",
+  "license": "MIT"
 }

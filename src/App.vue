@@ -6,4 +6,8 @@
 
 <style lang="scss">
 @import "~@/assets/scss/app";
+
+#app {
+  background-color: #EFEFEF;
+}
 </style>

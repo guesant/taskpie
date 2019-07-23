@@ -31,6 +31,7 @@ export default {
   padding: 1.25rem;
 
   background-color: #101540;
+  box-shadow: 0px 2px 4px rgba(17, 17, 53, 0.2);
 
   .brand {
     color: #E8EAF6;
@@ -45,6 +46,9 @@ export default {
     align-items: center;
 
     .backbutton {
+      width: 1.125rem;
+      height: 1.125rem;
+
       margin-right: 1.25rem;
     }
   }

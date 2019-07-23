@@ -6,10 +6,10 @@
       +
     </router-link>
     <main>
-      <div>
+      <Intro>
         <h1>Lista de Tarefas</h1>
         <p>Ainda faltam duas de três tarefas</p>
-      </div>
+      </Intro>
 
       <section>
         <h1>EM ABERTO</h1>
@@ -37,11 +37,13 @@
 
 <script>
 import Header from '@/components/UI/Header.vue';
+import Intro from '@/components/UI/Intro.vue';
 
 export default {
   name: 'home',
   components: {
     Header,
+    Intro,
   },
 };
 </script>

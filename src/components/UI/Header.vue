@@ -2,7 +2,7 @@
   <header class="header">
     <div class="left">
       <div v-if="backButton" @click="$router.go(-1)" class="backbutton">
-        <img src="@/assets/img/arrow-left.svg" alt="<" />
+        <img src="@/assets/img/arrow1.svg" alt="<" />
       </div>
 
       <h1 class="brand">taskpie</h1>
@@ -31,7 +31,7 @@ export default {
   padding: 1.25rem;
 
   background-color: #101540;
-  box-shadow: 0px 2px 4px rgba(17, 17, 53, 0.2);
+  box-shadow: 0px 0.125rem 0.25rem rgba(17, 17, 53, 0.2);
 
   .brand {
     color: #E8EAF6;
@@ -55,10 +55,9 @@ export default {
 
   .right {
     font-family: Rubik;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #D4D7EC;
   }
 
 }
 </style>
-

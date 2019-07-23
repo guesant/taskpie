@@ -23,6 +23,6 @@ export default {
   name: 'new',
   components: {
     Header,
-  }
+  },
 };
 </script>

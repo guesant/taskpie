@@ -17,13 +17,13 @@
 export default {
   props: {
     title: String,
-    collapse: {type: Boolean, default: true},
+    collapse: { type: Boolean, default: true },
   },
   data() {
     return {
       showTodos: true,
-    }
-  }
+    };
+  },
 };
 </script>
 
@@ -60,8 +60,10 @@ export default {
 
       // como funciona esse rotacionamento 360?
       // 1. o ícone aparenta estar em 0deg, mas na verdade está a -360deg
-      // 2. quando a classe .hide é adicionada, há uma rotação anti-horária (0deg -> -180deg) por .25s, mas ao final da animação, a rotação volta a ser 0deg
-      // por isso, adicionamos a rotação -180deg, que somente será respeitada após o fim da animação
+      // 2. quando a classe .hide é adicionada, há uma rotação anti-horária
+      //    (0deg -> -180deg) por .25s, mas ao final da animação, a rotação volta a ser 0deg.
+      //    por isso, adicionamos a rotação -180deg,
+      //    que somente será respeitada após o fim da animação
       // 3. quando a classe .hide é removida, há uma rotação horária (-180deg -> -360deg)
 
       &.swv {
@@ -71,7 +73,7 @@ export default {
         animation: rodaroda .25s ease-in-out;
         transform: rotate(-180deg);
       }
-      
+
       @keyframes rodaroda {
         0% {
           transform: rotate(0);
@@ -86,7 +88,18 @@ export default {
   .todo-list_list {
     ul {
       li {
-        background: linear-gradient(90deg, rgba(8, 12, 44, 0.02) 0%, rgba(5, 9, 39, 0.05) 100%);
+        background: linear-gradient(
+          90deg,
+          rgba(8, 12, 44, 0.02) 0%,
+          rgba(5, 9, 39, 0.05) 100%
+        );
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            rgba(8, 12, 44, 0.01) 0%,
+            rgba(5, 9, 39, 0.00) 100%
+          );
+        }
 
         a {
           display: block;

@@ -7,7 +7,7 @@
 <style lang="scss">
 @import "~@/assets/scss/app";
 
-#app {
+body {
   background-color: #EFEFEF;
 }
 </style>

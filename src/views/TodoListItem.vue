@@ -16,19 +16,13 @@ export default {
   data() {
     return {
       done: false,
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .todo-list_item {
-  background: linear-gradient(
-    90deg,
-    rgba(8, 12, 44, 0.02) 0%,
-    rgba(5, 9, 39, 0.05) 100%
-  );
-
   &, .checkbox, a {
     display: flex;
     align-items: center;
@@ -56,6 +50,8 @@ export default {
         background: #ffffff;
         border: 0.0625rem solid #080c2c;
         border-radius: 0.625rem;
+
+        transition: border-width .15s ease;
       }
 
       padding: 1.75rem 1.25rem;
@@ -79,4 +75,3 @@ export default {
   }
 }
 </style>
-

@@ -17,13 +17,13 @@ export default new Router({
       path: '/new',
       name: 'todo-new',
       // lazy-loaded when the route is visited.
-      component: () => import('./views/TodoNew.vue'),
+      component: () => import('./views/TodoViewNew.vue'),
     },
     {
       path: '/edit/:id',
       name: 'todo-edit',
       // lazy-loaded when the route is visited.
-      component: () => import('./views/TodoEdit.vue'),
+      component: () => import('./views/TodoViewEdit.vue'),
     },
   ],
 });

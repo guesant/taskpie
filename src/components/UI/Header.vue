@@ -5,7 +5,10 @@
         <img src="@/assets/img/arrow1.svg" alt="<" />
       </div>
 
-      <h1 class="brand">taskpie</h1>
+      <h1 class="brand">
+        <span v-if="!title">taskpie</span>
+        <span v-else class="brand-nd">{{title}}</span>
+      </h1>
     </div>
 
     <div class="right">
@@ -17,6 +20,7 @@
 <script>
 export default {
   props: {
+    title: { type: String },
     backButton: Boolean,
   },
 };
@@ -39,6 +43,11 @@ export default {
     font-weight: 500;
     font-size: 1.125rem;
     font-family: 'Poppins';
+
+    .brand-nd { // sendo como not-default
+      font-family: Rubik;
+      font-weight: normal;
+    }
   }
 
   .left {

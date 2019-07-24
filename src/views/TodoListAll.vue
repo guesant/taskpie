@@ -2,8 +2,8 @@
   <div class="home">
     <Header />
 
-    <router-link to="new">
-      +
+    <router-link to="new" class="new-todo">
+      <img src="@/assets/img/mais.svg" alt="+">
     </router-link>
     <main>
       <Intro>
@@ -47,3 +47,35 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.new-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+
+  width: 3.625rem;
+  height: 3.625rem;
+
+  background-color: rgba(#FFFFFF, 0.8);
+  border: 0.0625rem solid rgba(16, 21, 64, 0.2);
+  box-shadow: 0 0 0.375rem rgba(16, 21, 64, 0.25);
+  border-radius: 50%;
+
+  transition: box-shadow .3s ease, background-color .3s ease;
+
+  &:hover {
+    background-color: #fff;
+
+    box-shadow: 0px 0px 0.625rem rgba(16, 21, 64, 0.35);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+</style>

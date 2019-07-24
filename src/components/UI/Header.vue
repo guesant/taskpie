@@ -35,7 +35,7 @@ export default {
   padding: 1.25rem;
 
   background-color: #101540;
-  box-shadow: 0px 0.125rem 0.25rem rgba(17, 17, 53, 0.2);
+  box-shadow: 0 0.125rem 0.25rem rgba(17, 17, 53, 0.2);
 
   .brand {
     color: #E8EAF6;

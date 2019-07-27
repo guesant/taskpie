@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import TodoListAll from './views/TodoListAll.vue';
 
 Vue.use(Router);
 
@@ -10,14 +10,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'todo-list-all',
+      component: TodoListAll,
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   lazy-loaded when the route is visited.
-    //   component: () => import('./views/About.vue'),
-    // },
+    {
+      path: '/new',
+      name: 'todo-new',
+      // lazy-loaded when the route is visited.
+      component: () => import('./views/TodoViewNew.vue'),
+    },
+    {
+      path: '/edit/:id',
+      name: 'todo-edit',
+      // lazy-loaded when the route is visited.
+      component: () => import('./views/TodoViewEdit.vue'),
+    },
   ],
 });

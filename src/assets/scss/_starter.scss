@@ -1,0 +1,13 @@
+@import "reset";
+@import "fonts";
+
+@import "vars/fonts";
+
+
+html, body, input, textarea, button {
+  font-family: $main-font;
+}
+
+html, body, #app {
+  height: 100%;
+}

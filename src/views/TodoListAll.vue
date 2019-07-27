@@ -13,7 +13,7 @@
 
       <TodoList title="Em aberto" :collapse="false">
         <ul>
-          <TodoListItem id="1">
+          <TodoListItem id="legal">
             Marcar reunião com o pessoal
           </TodoListItem>
         </ul>
@@ -31,7 +31,7 @@
 
 <script>
 import Header from '@/components/UI/Header.vue';
-import Intro from '@/components/UI/Intro.vue';
+import Intro from '@/components/Intro.vue';
 
 import TodoList from '@/views/TodoList.vue';
 import TodoListItem from '@/views/TodoListItem.vue';
@@ -61,7 +61,9 @@ export default {
   width: 3.625rem;
   height: 3.625rem;
 
-  background-color: rgba(#FFFFFF, 0.8);
+  // background-color: rgba(#FFFFFF, 0.8);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #EFEFEF;
+
   border: 0.0625rem solid rgba(16, 21, 64, 0.2);
   box-shadow: 0 0 0.375rem rgba(16, 21, 64, 0.25);
   border-radius: 50%;

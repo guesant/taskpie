@@ -7,7 +7,13 @@
       </div>
     </div>
 
-    <div class="todo-list_list" v-if="showTodos">
+    <div
+      class="todo-list_list"
+      :class="{closed: !showTodos}"
+
+      ref="todo_list_list"
+      v-on:DOMSubtreeModified="adjustMaxHeight"
+    >
       <slot />
     </div>
   </div>
@@ -19,10 +25,30 @@ export default {
     title: String,
     collapse: { type: Boolean, default: true },
   },
+  methods: {
+    adjustMaxHeight() {
+      this.$refs.todo_list_list.style.maxHeight = `${this.$refs.todo_list_list.scrollHeight}px`;
+      console.log(this.$refs);
+    },
+  },
   data() {
     return {
       showTodos: true,
     };
+  },
+  watch: {
+    showTodos() {
+      console.log(this.showTodos);
+      if (!this.showTodos) {
+        // fechando...
+      } else {
+        // abrindo...
+        // this.$refs.todo_list_list.style.maxHeight = 0;
+      }
+    },
+  },
+  mounted() {
+    this.adjustMaxHeight();
   },
 };
 </script>
@@ -86,18 +112,40 @@ export default {
   }
 
   .todo-list_list {
+    opacity: 1;
+    height: 100%;
+    overflow: hidden;
+
+    transition: opacity .7s ease-in-out, max-height .5s ease-in-out;
+
+    &.closed {
+      opacity: 0.5;
+      max-height: 0 !important;
+    }
     ul {
       li {
+        // background: linear-gradient(
+        //   90deg,
+        //   rgba(8, 12, 44, 0.02) 0%,
+        //   rgba(5, 9, 39, 0.05) 100%
+        // );
+        // &:hover {
+        //   background: linear-gradient(
+        //     90deg,
+        //     rgba(8, 12, 44, 0.01) 0%,
+        //     rgba(5, 9, 39, 0.00) 100%
+        //   );
+        // }
         background: linear-gradient(
           90deg,
-          rgba(8, 12, 44, 0.02) 0%,
-          rgba(5, 9, 39, 0.05) 100%
+          rgba(8, 12, 44, 0.01) 0%,
+          rgba(5, 9, 39, 0.00) 100%
         );
         &:hover {
           background: linear-gradient(
             90deg,
-            rgba(8, 12, 44, 0.01) 0%,
-            rgba(5, 9, 39, 0.00) 100%
+            rgba(8, 12, 44, 0.05) 0%,
+            rgba(5, 9, 39, 0.07) 100%
           );
         }
 

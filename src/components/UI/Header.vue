@@ -40,13 +40,15 @@ export default {
   .brand {
     color: #E8EAF6;
 
-    font-weight: 500;
     font-size: 1.125rem;
-    font-family: 'Poppins';
 
-    .brand-nd { // sendo como not-default
-      font-family: Rubik;
-      font-weight: normal;
+    // .brand-nd { // sendo como not-default
+    //   font-family: Rubik;
+    //   font-weight: normal;
+    // }
+    :not(.brand-nd) {
+      font-weight: 500;
+      font-family: 'Poppins';
     }
   }
 
@@ -63,7 +65,7 @@ export default {
   }
 
   .right {
-    font-family: Rubik;
+    // font-family: Rubik;
     font-size: 0.875rem;
     color: #D4D7EC;
   }

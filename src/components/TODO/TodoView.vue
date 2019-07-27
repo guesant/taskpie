@@ -79,7 +79,6 @@ export default {
       &:not(.input-title) {
         margin-top: 2rem;
 
-        font-family: Rubik;
         font-size: 0.875rem;
         line-height: 1.35;
 
